@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Router, Switch } from "react-router-dom";
+import Demo from "./page/Demo";
+//history
+import { createBrowserHistory } from "history";
+//page
+import Demo1 from "./page/Demo1";
+import GobalStyle from "./gobalStyle/GobalStyle";
+
+let history = createBrowserHistory();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <GobalStyle>
+      <Router history={history}>
+        <Switch>
+          <Route exact path='/demo' component={Demo} />
+          <Route exact path='/demo1' component={Demo1} />
+          <Route exact path='' component={Demo} />
+        </Switch>
+      </Router>
+    </GobalStyle>
+  )
 }
 
 export default App;

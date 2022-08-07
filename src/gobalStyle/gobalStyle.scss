@@ -1,0 +1,10 @@
+// helpers
+@import './helpers/variables';
+@import './helpers/mixin';
+// vendors
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'antd/dist/antd.css';
+// base
+// components
+// pages
+@import './page/demo.scss';
