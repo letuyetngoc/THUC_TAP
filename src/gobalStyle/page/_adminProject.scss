@@ -1,0 +1,148 @@
+.adminProject {
+
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    background: transparent;
+
+    .adminProject_box {
+        background-color: #3ba0e9;
+        color: black;
+        padding: 15px;
+        border-radius: 5px;
+
+        .adminProject_box_content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            label {
+                display: inline-block;
+                margin-right: 10px;
+                font-size: 18px;
+                color: white;
+            }
+
+            input {
+                width: 100%;
+                padding: 8px;
+                border-radius: 5px;
+                border: solid 1px white;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+
+        .adminProject_box_QR_code {
+            margin-top: 10px;
+            display: inline-block;
+            background-color: #70bef6;
+            padding: 10px;
+            padding-top: 0;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .adminProject_tree {
+        position: 'relative';
+        height: 80%;
+        overflow: hidden auto;
+
+        &::-webkit-scrollbar {
+            display: none
+        }
+
+        .tree {
+            position: relative;
+            background: white;
+            margin-top: 20px;
+            padding: 30px;
+            font-size: .85rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            height: 100%;
+
+
+            span {
+                font-size: 13px;
+                font-style: italic;
+                letter-spacing: .4px;
+                color: #a8a8a8;
+            }
+
+            .tree_icon {
+                color: #007bff;
+                font-size: 15px;
+                margin-right: 5px;
+            }
+
+            .fa-html5 {
+                color: #f21f10;
+            }
+
+            ul {
+                padding-left: 5px;
+                list-style: none;
+
+                li {
+                    position: relative;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 15px;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+
+                    &:before {
+                        position: absolute;
+                        top: 15px;
+                        left: 0;
+                        width: 10px;
+                        height: 1px;
+                        margin: auto;
+                        content: '';
+                        background-color: #666;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 1px;
+                        height: 100%;
+                        content: '';
+                        background-color: #666;
+                    }
+
+                    &:last-child:after {
+                        height: 15px;
+                    }
+                }
+
+                a {
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.ant-layout-content site-layout-background {
+    justify-content: center;
+}

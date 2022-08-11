@@ -1,21 +1,50 @@
 import { Route, Router, Switch } from "react-router-dom";
-import Demo from "./page/Demo";
 //history
 import { createBrowserHistory } from "history";
 //page
-import Demo1 from "./page/Demo1";
 import GobalStyle from "./gobalStyle/GobalStyle";
+import Login from "./page/Login/Login";
+import Register from "./page/Register/Register";
+import Admin from "./page/Admin/Admin";
+import AdminForm from "./page/Admin/AdminForm";
+import AdminProject from "./page/Admin/AdminProject";
+import Manage from "./page/Manage/Manage";
+import UserForm from "./component/form/UserForm";
+import ManageUserKYC from "./page/Manage/ManageUserKCY";
+import ManageUser from "./page/Manage/ManageUser";
+import VerifyEmail from "./page/Manage/VerifyEmail";
 
-let history = createBrowserHistory();
+export let history = createBrowserHistory();
 
 function App() {
   return (
     <GobalStyle>
       <Router history={history}>
         <Switch>
-          <Route exact path='/demo' component={Demo} />
-          <Route exact path='/demo1' component={Demo1} />
-          <Route exact path='' component={Demo} />
+
+          {(localStorage.getItem('USER_LOGIN') && localStorage.getItem('ACCESS_TOKEN')) ?
+            <Admin exact path='/login' Component={AdminProject} /> : <Route exact path='/login' component={Login} />
+          }
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/register/:id' component={Register} />
+          <Route exact path='/verify/:token' component={VerifyEmail} />
+
+          <Admin exact path='/admin/form' Component={AdminForm} />
+          <Admin exact path='/admin/userform' Component={UserForm} />
+          <Admin exact path='/admin/users' Component={AdminProject} />
+
+          <Route exact path='/manage' component={Manage} />
+          <Manage exact path='/manage/userkyc' Component={ManageUserKYC} />
+          <Manage exact path='/manage/user' Component={ManageUser} />
+
+          {(localStorage.getItem('USER_LOGIN') && localStorage.getItem('ACCESS_TOKEN')) ?
+            <Admin exact path='' Component={AdminProject} /> :
+            <Route exact path='' component={Login} />
+          }
+
+
+
         </Switch>
       </Router>
     </GobalStyle>

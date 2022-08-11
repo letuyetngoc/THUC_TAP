@@ -1,0 +1,6 @@
+export const GET_ID = 'GET_ID'
+export const GET_PARENT = 'GET_PARENT'
+export const GET_COUNTRY = 'GET_COUNTRY'
+export const PENDING_STATUS = 'PENDING_STATUS'
+export const APPROVED_STATUS = 'APPROVED_STATUS'
+export const GET_ALL_USER_KYC = 'GET_ALL_USER_KYC'

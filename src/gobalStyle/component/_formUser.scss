@@ -1,0 +1,64 @@
+.formUser {
+    width: 70%;
+    height: 100%;
+    overflow: hidden auto;
+
+    &::-webkit-scrollbar {
+        display: none
+    }
+
+    h2 {
+        color: #3ba0e9;
+        text-align: center;
+    }
+
+    .formUser_container {
+        p {
+            color: red;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+
+            label {
+                color: #3ba0e9;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+
+        input {}
+
+        small {}
+
+        .btn_submitFormUser {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3ba0e9;
+            text-align: center;
+            color: white;
+            margin: 20px;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .btn_verify {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3ba0e9;
+            text-align: center;
+            color: white;
+            margin: 20px;
+            margin-left: 0;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

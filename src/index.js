@@ -12,9 +12,9 @@ import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from './redux/saga/rootSaga';
 
-const sagaMiddleware = createSagaMiddleware()
-const store = createStore(rootReducer, applyMiddleware(sagaMiddleware))
-sagaMiddleware.run(rootSaga)
+// const sagaMiddleware = createSagaMiddleware()
+const store = createStore(rootReducer, applyMiddleware(thunk))
+// sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(
   <Provider store={store}>
