@@ -48,7 +48,7 @@ export const login = (data) => {
 
         } catch (error) {
             console.log('error', error)
-            errorMessage('Error', error.response.data.message)
+            errorMessage('Error', error.response.data.message || '')
         }
     }
 }
@@ -127,14 +127,14 @@ export const getCountry = async (dispatch) => {
     }
 }
 
-export const refreshToken = (data) => {
-    return async () => {
-        try {
-            const result = await userService.refreshToken(data)
-            console.log('result refresh token', result)
+// export const refreshToken = (data) => {
+//     return async () => {
+//         try {
+//             const result = await userService.refreshToken(data)
+//             console.log('result refresh token', result)
 
-        } catch (error) {
-            console.log('error', error)
-        }
-    }
-}
+//         } catch (error) {
+//             console.log('error', error)
+//         }
+//     }
+// }

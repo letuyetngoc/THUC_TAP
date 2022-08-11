@@ -30,7 +30,7 @@ export default function Register(props) {
                 // history.push(`/verify/${userLogin}`)
 
             } catch (error) {
-                console.log('error', error.response.data.message)
+                console.log('error', error)
                 errorMessage('Error', error.response.data.message)
             }
         }
@@ -104,7 +104,6 @@ export default function Register(props) {
 
 
         dispatch(signup(state.values))
-
     }
 
     return (
