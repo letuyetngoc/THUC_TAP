@@ -1,5 +1,6 @@
 import React from 'react'
 import HomeAgents from './HomeAgents'
+import HomeFeature from './HomeFeature'
 import HomeHeader from './HomeHeader'
 import HomeInfo from './HomeInfo'
 import HomeService from './HomeService'
@@ -13,6 +14,7 @@ export default function Home() {
             <HomeUtility />
             <HomeService />
             <HomeAgents />
+            <HomeFeature />
             <br />
             <br />
             <br />
