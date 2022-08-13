@@ -3,42 +3,42 @@ $SS: 280px;
 $XS: 480px;
 $SM: 576px;
 $MD: 768px;
-$LG: 900px;
+$LG: 992px;
 $XL: 1200px;
 
 @mixin Responesive($canvas) {
     @if $canvas ==SS {
-        @media only screen and (max-width: $SS) {
+        @media only screen and (min-width: $SS) {
             @content;
         }
     }
 
     @if $canvas ==XS {
-        @media only screen and (max-width: $XS) {
+        @media only screen and (min-width: $XS) {
             @content;
         }
     }
 
     @else if $canvas ==SM {
-        @media only screen and (max-width: $SM) {
+        @media only screen and (min-width: $SM) {
             @content;
         }
     }
 
     @else if $canvas ==MD {
-        @media only screen and (max-width: $MD) {
+        @media only screen and (min-width: $MD) {
             @content;
         }
     }
 
     @else if $canvas ==LG {
-        @media only screen and (max-width: $LG) {
+        @media only screen and (min-width: $LG) {
             @content;
         }
     }
 
     @else if $canvas ==XL {
-        @media only screen and (max-width: $XL) {
+        @media only screen and (min-width: $XL) {
             @content;
         }
     }

@@ -2,7 +2,6 @@ import axios from 'axios';
 import { DOMAIN } from '../setting/setting';
 
 const refreshToken = async (data) => {
-    console.log('action')
     const userLogin = JSON.parse(localStorage.getItem('USER_LOGIN'))
     try {
         const result = await axios({
@@ -13,8 +12,6 @@ const refreshToken = async (data) => {
             method: 'POST',
             data: { refreshToken: data }
         })
-        console.log('result refresh token', result.data.data)
-        console.log('result  token', result.data.data.token)
 
         localStorage.setItem('USER_LOGIN', JSON.stringify({
             ...userLogin, token: result.data.data.token, expiresIn: result.data.data.expiresIn
@@ -29,13 +26,9 @@ const refreshToken = async (data) => {
 const checkToken = async () => {
 
     const timeRecent = Date.now()
-    console.log('timeRecent', timeRecent)
-    console.log('userLogin.expiresIn', JSON.parse(localStorage.getItem('USER_LOGIN'))?.expiresIn)
 
     if (JSON.parse(localStorage.getItem('USER_LOGIN'))?.expiresIn) {
-        console.log('time start')
         if (timeRecent > JSON.parse(localStorage.getItem('USER_LOGIN')).expiresIn) {
-            console.log('time start1')
             await refreshToken(JSON.parse(localStorage.getItem('USER_LOGIN')).refreshToken)
         }
     }

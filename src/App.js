@@ -13,6 +13,7 @@ import UserForm from "./component/form/UserForm";
 import ManageUserKYC from "./page/Manage/ManageUserKCY";
 import ManageUser from "./page/Manage/ManageUser";
 import VerifyEmail from "./page/Manage/VerifyEmail";
+import Home from "./page/Home/Home";
 
 export let history = createBrowserHistory();
 
@@ -25,6 +26,7 @@ function App() {
           {(localStorage.getItem('USER_LOGIN') && localStorage.getItem('ACCESS_TOKEN')) ?
             <Admin exact path='/login' Component={AdminProject} /> : <Route exact path='/login' component={Login} />
           }
+          <Route exact path='/home' component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route exact path='/register/:id' component={Register} />
