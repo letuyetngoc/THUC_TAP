@@ -5,20 +5,23 @@
 
         .manage__navigation {
             position: fixed;
-            width: 200px;
+            width: 0;
+            left: -10px;
             height: 100%;
             background-color: $dark-blue;
             border-left: 10px solid transparent;
             overflow: hidden;
             transition: $smooth;
 
-            @include Responesive(LG) {
+            @include Responesive(MD) {
                 width: 60px;
             }
 
-            @include Responesive(XS) {
-                width: 0;
+            @include Responesive(LG) {
+                width: 200px;
             }
+
+
 
             ul {
                 position: absolute;
@@ -67,6 +70,7 @@
                             text-align: center;
                             height: 40px;
                             line-height: 34px;
+                            font-size: 20px;
                         }
 
                         .title {
@@ -88,32 +92,26 @@
         }
 
         .manage__navigation.active {
-            width: 60px;
+            width: 300px;
             transition: $smooth;
-
-            @include Responesive(LG) {
-                width: 300px;
-            }
-
-
         }
 
         .manage__main {
             position: absolute;
-            width: calc(100% - 200px);
-            left: 200px;
+            width: 100%;
+            left: 0;
             min-height: 100vh;
             background-color: $light-gray;
             transition: $smooth;
 
-            @include Responesive(LG) {
-                width: calc(100% - 60px);
+            @include Responesive(MD) {
                 left: 60px;
+                width: calc(100% - 60px);
             }
 
-            @include Responesive(XS) {
-                width: 100%;
-                left: 0;
+            @include Responesive(LG) {
+                left: 200px;
+                width: calc(100% - 200px);
             }
 
             .manage__main_topbar {
@@ -186,13 +184,13 @@
         }
 
         .manage__main.active {
-            width: calc(100% - 60px);
-            left: 60px;
             transition: $smooth;
+            width: calc(100% - 200px);
+            left: 200px;
 
             @include Responesive(LG) {
-                width: calc(100% - 200px);
-                left: 200px;
+                width: calc(100% - 40px);
+                left: 40px;
             }
         }
     }

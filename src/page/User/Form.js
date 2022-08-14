@@ -5,10 +5,8 @@ import { Input } from 'antd';
 import { errorMessage } from '../../component/message';
 import { useDispatch } from 'react-redux';
 import { changePassword } from '../../redux/action/UserAction';
-import UserForm from '../../component/form/UserForm';
 
-
-export default function AdminForm() {
+export default function Form() {
     const dispatch = useDispatch()
 
     const [state, setState] = useState({
@@ -71,7 +69,6 @@ export default function AdminForm() {
                 </div>
                 <button className='btn_submitChangePassword' onClick={submitChangePassword}>Submit</button>
             </div>
-            {/* <UserForm /> */}
         </div>
     )
 }

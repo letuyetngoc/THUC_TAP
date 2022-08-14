@@ -14,7 +14,7 @@ export default function VerifyEmail(props) {
         return async () => {
             try {
                 const result = await userService.verifyEmail()
-                console.log('result', result)
+                // console.log('result', result)
                 localStorage.removeItem('ACCESS_TOKEN')
 
                 successMessage('Success', result.data.message)
@@ -22,7 +22,7 @@ export default function VerifyEmail(props) {
                 localStorage.setItem('USER_LOGIN', JSON.stringify(result.data.data))
                 localStorage.setItem('ACCESS_TOKEN', result.data.data.token)
 
-                history.push('/admin/users')
+                history.push('/user/users')
 
             } catch (error) {
                 console.log('error', error)

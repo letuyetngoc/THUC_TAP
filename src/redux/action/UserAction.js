@@ -41,9 +41,9 @@ export const login = (data) => {
             localStorage.setItem('USER_LOGIN', JSON.stringify(result.data.data))
 
             if (result.data.data.id == 1) {
-                history.push('/manage')
+                history.push('/admin')
             } else {
-                history.push('/admin/users')
+                history.push('/user/users')
             }
 
         } catch (error) {

@@ -69,7 +69,7 @@ const onChange = (pagination, filters, sorter, extra) => {
     // console.log('params', pagination, filters, sorter, extra);
 };
 
-const ManageUser = () => {
+const AdminUser = () => {
     const dispatch = useDispatch()
     const [arrUser, setArrUser] = useState()
     console.log('arrUser', arrUser)
@@ -154,4 +154,4 @@ const ManageUser = () => {
         </div>
     </div>
 };
-export default ManageUser;
+export default AdminUser;

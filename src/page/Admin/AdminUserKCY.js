@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllUserKyc, updateKyc } from '../../redux/action/AdminAction'
 
-export default function ManageUserKYC() {
+export default function AdminUserKYC() {
 
     const dispatch = useDispatch()
 

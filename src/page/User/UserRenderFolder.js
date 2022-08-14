@@ -6,7 +6,7 @@ import Modal from 'antd/lib/modal/Modal';
 import { getParent } from '../../redux/action/UserAction';
 import QRCode from 'react-qr-code';
 
-export default function AdminProject() {
+export default function UserRenderFolder() {
 
     const userLogin = JSON.parse(localStorage.getItem('USER_LOGIN'))
     // console.log('userLogin', userLogin)

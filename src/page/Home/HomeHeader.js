@@ -1,20 +1,17 @@
 import React from 'react'
 import { useState } from 'react';
-
+import { history } from '../../App'
 //icon
 import { FaFacebookF, FaGooglePlusG, FaLinkedinIn } from 'react-icons/fa';
 import { BsTwitter } from 'react-icons/bs';
 import { MenuOutlined } from '@ant-design/icons'
 
 export default function HomeHeader() {
-    const [classActiveItem, setClassActiveItem] = useState('active')
 
     const handleToggleBtn = () => {
         document.querySelector('.homeHeader__nab-list').classList.toggle('active')
     }
-    const handleActiveClassItem = () => {
-        setClassActiveItem(classActiveItem == 'active' ? '' : 'active')
-    }
+
     return (
         <div className='homeHeader'>
             <div className='homeHeader__container'>
@@ -63,7 +60,7 @@ export default function HomeHeader() {
                                 <a className='nav-link'>Contact</a>
                             </li>
                             <li className='nav-item'>
-                                <button className='btn_login'>Log in</button>
+                                <button className='btn_login' onClick={() => history.push('/login')}>Log in</button>
                             </li>
                         </ul>
                     </div>
