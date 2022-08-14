@@ -34,11 +34,13 @@
 
         .homeTestimonial__content {
             .slick_container {
+                display: flex;
+                justify-content: center;
 
                 .slick_item {
+
                     background-color: #343a40;
                     width: 308px;
-                    margin-right: 10px;
                     padding: 3rem;
 
                     @include Responesive(SM) {
@@ -63,7 +65,7 @@
                             height: 0;
                             border-top: 15px solid rgb(224, 225, 226);
                             border-right: 7px solid transparent;
-                            border-left: 17px solid transparent;
+                            border-left: 7px solid transparent;
                             transform: rotate(0deg);
                         }
 
@@ -94,9 +96,9 @@
 
                 .grid_img {
                     position: absolute;
-                    width: 2%;
-                    top: 6%;
-                    left: 11%;
+                    width: 7%;
+                    top: 15%;
+                    left: 47%;
                     background: #59646f;
                     padding: 0.2em;
                     border-radius: 50%;
@@ -134,5 +136,9 @@
 
     .slick-dots li {
         margin: 0;
+    }
+
+    .slick-slide {
+        position: relative;
     }
 }

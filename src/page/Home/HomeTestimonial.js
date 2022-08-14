@@ -61,7 +61,7 @@ export default function HomeTestimonial() {
                 <div className='homeTestimonial__content'>
                     <Slider {...settings}>
                         {data && data.map((item, index) => {
-                            return <SlickItem img={item.img} name={item.name} />
+                            return <SlickItem key={index} img={item.img} name={item.name} />
 
                         })}
                     </Slider>

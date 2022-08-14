@@ -2,6 +2,7 @@ import React from 'react'
 import HomeAgents from './HomeAgents'
 import HomeBottomLast from './HomeBottomLast'
 import HomeFeature from './HomeFeature'
+import HomeFooter from './HomeFooter'
 import HomeHeader from './HomeHeader'
 import HomeInfo from './HomeInfo'
 import HomeService from './HomeService'
@@ -19,10 +20,7 @@ export default function Home() {
             <HomeFeature />
             <HomeBottomLast />
             <HomeTestimonial />
-            <br />
-            <br />
-            <br />
-            <br />
+            <HomeFooter />
         </div>
     )
 }

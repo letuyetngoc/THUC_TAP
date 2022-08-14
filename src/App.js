@@ -44,9 +44,7 @@ function App() {
             <Admin exact path='' Component={AdminProject} /> :
             <Route exact path='' component={Login} />
           }
-
-
-
+          <Route exact path='/home' component={Home} />
         </Switch>
       </Router>
     </GobalStyle>
