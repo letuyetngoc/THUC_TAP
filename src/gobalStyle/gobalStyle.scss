@@ -1,9 +1,13 @@
 // helpers
 @import './helpers/variables';
 @import './helpers/mixin';
+
 // vendors
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'antd/dist/antd.css';
+
 // base
 @import './reset';
 // components
@@ -27,3 +31,5 @@
 @import './page/home/homeService';
 @import './page/home/homeAgents';
 @import './page//home/homeFeature';
+@import './page/home/homeBottomLast';
+@import './page/home/homeTestimonial';

@@ -45,12 +45,12 @@ button {
 }
 
 h3 {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     margin-bottom: 5px;
     color: white;
 
     @include Responesive(SM) {
-        // max-width: 540px;
+        font-size: 1.9rem;
     }
 
     @include Responesive(MD) {

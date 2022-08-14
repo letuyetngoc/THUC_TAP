@@ -81,6 +81,10 @@
                         transform: translateY(150%) scale(1.5);
                         position: absolute;
 
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
                         background-color: #2529d8;
                         bottom: 0;
                         height: 27%;
@@ -93,6 +97,7 @@
 
                         ul {
                             padding-left: 0;
+                            margin-bottom: 0;
                             position: relative;
                             z-index: 10;
 

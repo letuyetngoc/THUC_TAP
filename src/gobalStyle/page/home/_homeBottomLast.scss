@@ -1,0 +1,30 @@
+.homeBottomLast {
+    margin: 1rem 0;
+    background-image: url('../../../../public/assets/img/banner2.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 3rem 0;
+    min-height: 167px;
+
+    display: flex;
+    align-items: center;
+
+    @include Responesive(XS) {
+        min-height: 200px;
+    }
+
+    @include Responesive(MD) {
+        min-height: 264px;
+
+    }
+
+    @include Responesive(LG) {
+        min-height: 360px;
+    }
+
+    .homeBottomLast__container {
+        h3 {
+            text-align: center;
+        }
+    }
+}
