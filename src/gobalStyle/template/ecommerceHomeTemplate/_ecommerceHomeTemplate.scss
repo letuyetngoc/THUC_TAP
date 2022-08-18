@@ -156,6 +156,7 @@
                 height: 40px;
                 line-height: 32px;
                 text-align: center;
+                cursor: pointer;
 
                 @include Responesive(MD) {
                     display: none;

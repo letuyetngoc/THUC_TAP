@@ -4,9 +4,35 @@
     margin-top: 2rem;
     padding-bottom: 2rem;
 
+    @include Responesive(MD) {
+        margin-top: 2rem !important;
+        padding-bottom: 2rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
     .store__content {
+        .store__carousel {
+
+            margin-bottom: 40px;
+
+            div {
+                background-image: url('https://picsum.photos/500');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                img {
+                    opacity: 0;
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+
         .store_nav {
             ul {
+                position: relative;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -33,6 +59,25 @@
                     p {
                         margin-bottom: 0;
                     }
+
+                }
+
+                .btn_slick {
+                    border-radius: 50%;
+                    padding: 0;
+                    background-color: transparent;
+                    box-shadow: none;
+
+                    &.right {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+                        transform: scale(1.3);
+                    }
                 }
 
                 li.active {
@@ -54,8 +99,7 @@
             margin-top: 1rem;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-
+            // justify-content: center; 
             gap: 20px;
 
             .item {
@@ -96,4 +140,12 @@
             }
         }
     }
+}
+
+.slick-next:before {
+    color: $turquoise;
+}
+
+.slick-prev:before {
+    color: $turquoise;
 }
