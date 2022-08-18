@@ -112,6 +112,7 @@ const AdminUser = () => {
             try {
                 const result = await adminService.activeUser(userId)
                 console.log('result', result)
+                successMessage('Susscess', result.data.message)
             } catch (error) {
                 console.log('error', error)
                 errorMessage('Error', error.response.data.message)

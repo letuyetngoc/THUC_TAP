@@ -17,39 +17,21 @@ export default function Manage(props) {
                     <div className='manage__navigation'>
                         <ul>
                             <li>
-                                <NavLink to='/manage' className='nav__item'>
+                                <NavLink to='/admin' className='nav__item'>
                                     <span className='icon'><BsApple /></span>
                                     <span className='title'>Brand</span>
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className='nav__item' to='/manage/userkyc' activeClassName='nav__item_active'>
+                                <NavLink className='nav__item' to='/admin/userkyc' activeClassName='nav__item_active'>
                                     <span className='icon'><FaUserAlt /></span>
                                     <span className='title'>UsersKYC</span>
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to='/manage/user' className='nav__item' activeClassName='nav__item_active'>
+                                <NavLink to='/admin/user' className='nav__item' activeClassName='nav__item_active'>
                                     <span className='icon'><FaUserAlt /></span>
                                     <span className='title'>Users</span>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='' className='nav__item'>
-                                    <span className='icon'><FaUserAlt /></span>
-                                    <span className='title'>Project</span>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='' className='nav__item'>
-                                    <span className='icon'><FaUserAlt /></span>
-                                    <span className='title'>Project</span>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='' className='nav__item'>
-                                    <span className='icon'><FaUserAlt /></span>
-                                    <span className='title'>Project</span>
                                 </NavLink>
                             </li>
                         </ul>

@@ -1,0 +1,211 @@
+.wallet {
+    @include Responesive(LG) {
+        margin-top: 40px;
+        padding-bottom: 15px;
+    }
+
+    .wallet__container {
+        margin: 15px;
+
+        @include Responesive(MD) {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @include Responesive(LG) {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .wallet__left {
+            @include Responesive(LG) {
+                width: 50%;
+            }
+
+            .wallet_contain {
+                .wallet_title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: rgb(235, 236, 240);
+                    padding: 16px;
+                    border: 1px solid rgb(216, 217, 222);
+                    border-radius: 4px 4px 0 0;
+
+                    div {
+                        font-size: 16px;
+                    }
+
+                    .btn_contact {
+                        display: inline-block;
+                        padding: 7px;
+                        border: 1px solid rgb(216, 217, 222);
+                        border-radius: 4px;
+                        background-color: white;
+                        cursor: pointer;
+                    }
+                }
+
+                .wallet_item {
+                    position: relative;
+                    background-color: white;
+                    border: 1px solid rgb(216, 217, 222);
+                    border-top: none;
+                    padding: 16px;
+
+                    .icon {
+                        position: absolute;
+                        font-size: 23px;
+                        left: 15px;
+                        top: 20px;
+                    }
+
+                    .item_content {
+                        padding-left: 40px;
+
+                        h4 {
+                            margin-bottom: 5px;
+                        }
+
+                        p {
+                            font-size: 18px;
+                        }
+
+                        .list_btn {
+                            display: flex;
+                            justify-content: flex-start;
+
+                            .btn_deposit {
+                                display: inline-block;
+                                padding: 7px;
+                                background-color: $turquoise;
+                                border: 1px solid $turquoise;
+                                color: white;
+                                border-radius: 4px;
+                                margin-right: 10px;
+                                cursor: pointer;
+                            }
+
+                            .btn_widthDraw {
+                                display: inline-block;
+                                padding: 7px;
+                                background-color: white;
+                                border: 1px solid $turquoise;
+                                border-radius: 4px;
+                                margin-right: 10px;
+                                cursor: pointer;
+                            }
+
+                            .btn_Swap {
+                                display: inline-block;
+                                padding: 7px;
+                                background-color: gray;
+                                border: 1px solid rgb(235, 236, 240);
+                                color: white;
+                                border-radius: 4px;
+                                margin-right: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .wallet__right {
+            @include Responesive(LG) {
+                width: 40%;
+            }
+
+            background-color: white;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1px solid rgb(216, 217, 222);
+
+            @include Responesive(LG) {
+                margin-top: 0;
+            }
+
+            .wallet_deposit {
+                p {
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                .deposit_link {
+                    position: relative;
+                    border: 1px solid rgb(216, 217, 222);
+                    border-radius: 4px;
+                    padding-right: 100px;
+                    padding: 16px;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    input {
+                        outline: none;
+                        width: 76%;
+                        border: none;
+                        background-color: transparent;
+                    }
+
+                    .btn_copy {
+                        position: absolute;
+                        right: 15px;
+                        top: 9px;
+                        display: inline-block;
+                        padding: 7px 15px;
+                        background-color: $turquoise;
+                        color: white;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+                }
+
+                .deposit_qrCode {
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px;
+                }
+
+                .btn_transaction {
+                    display: flex;
+                    justify-content: center;
+
+                    div {
+                        display: inline-block;
+                        padding: 7px 23px;
+                        border: 1px solid rgb(216, 217, 222);
+                        border-radius: 4px;
+                        background-color: $turquoise;
+                        color: white;
+                        cursor: pointer;
+                    }
+
+                }
+
+                .deposit_note {
+                    margin-top: 10px;
+
+                    p {}
+
+                    .note_item {
+                        margin-bottom: 10px;
+
+                        .icon {
+                            color: $turquoise;
+                            font-size: 20px;
+                            margin-right: 8px;
+                        }
+
+                        span {}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.byCoin {
+    .byCoin__container {
+        padding: 15px;
+
+        @include Responesive(MD) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @include Responesive(LG) {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .byCoin__amount {
+            .amount_item {
+                label {
+                    color: rgb(94, 88, 98);
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .btn_by {
+                width: 100%;
+                padding: 7px;
+                background-color: rgb(190, 190, 190);
+                text-align: center;
+                font-size: 16px;
+                color: gray;
+                font-weight: 600;
+                margin: 20px 0;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+
+        hr {
+            color: #c7c3c3;
+            margin: 24px 0;
+        }
+
+        .byCoin__adDetail {
+            width: 100%;
+
+            .adDetail_table {
+                border: 1px solid rgb(216, 217, 222);
+                width: 100%;
+
+                thead {
+                    background-color: rgb(235, 236, 240);
+                    font-size: 19px;
+                    font-weight: 500;
+
+
+                    td {
+                        border: 1px solid rgb(216, 217, 222);
+                        padding: 16px;
+
+                    }
+
+                }
+
+                tr {
+                    td {
+                        border: 1px solid rgb(216, 217, 222);
+                        padding: 16px;
+                        background-color: white;
+                    }
+                }
+
+
+            }
+        }
+
+        .byCoin__info {
+            .info_item {
+                border: 1px solid rgb(216, 217, 222);
+                border-radius: 4px;
+                margin-bottom: 32px;
+
+                div {
+                    display: inline-block;
+                    padding: 24px;
+                    color: rgb(73, 71, 74);
+                    font-weight: bold;
+                    font-size: 17px;
+                    cursor: pointer;
+                }
+
+                .icon {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}

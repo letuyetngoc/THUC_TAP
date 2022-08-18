@@ -1,0 +1,179 @@
+.ecommerceHomeTemplate {
+    position: relative;
+
+    .overplay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0, 0.3);
+        display: none;
+    }
+
+    .overplay.active {
+        display: initial;
+    }
+
+    .ecommerceHomeTemplate__header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        background-color: #FFF;
+        box-shadow: 0 1px 2px #0002;
+        position: relative;
+        z-index: 100;
+        flex-shrink: 0;
+        padding: 0.7rem 0.3rem;
+
+        @include Responesive(MD) {
+            padding: 0.7rem 1.5rem;
+        }
+
+
+
+        .ecommerceHomeTemplate__nav {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav_logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 25px;
+                font-weight: 600;
+
+                .icon {
+                    font-size: 40px;
+                    color: $turquoise;
+                }
+            }
+
+            .nav_main {
+                position: absolute;
+                background-color: white;
+                right: 0;
+                top: 3.2rem;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                z-index: 99;
+                display: none;
+                margin: 0;
+                padding: 0;
+
+                @include Responesive(MD) {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: initial;
+                }
+
+                li {
+                    transition: $smooth;
+                    padding: 0.75rem 2rem;
+                    color: black;
+
+                    .nav_main_item {
+                        color: black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        flex-grow: 1;
+
+                        p {
+                            margin-bottom: 0;
+                            text-align: center;
+                            font-size: 15px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .nav_main_item.nav_main_active {
+                        color: $turquoise;
+                    }
+
+                    &:hover {
+                        .nav_main_item {
+                            p {
+                                color: $turquoise;
+                                transition: $smooth;
+                            }
+                        }
+
+                    }
+                }
+
+                .btn_right {
+                    padding: 1rem;
+                    text-align: center;
+
+                    @include Responesive(MD) {
+                        margin-left: 3rem;
+                    }
+
+                    .nav_avatar {
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-radius: 50%;
+                        background-color: #56c6b5;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+
+                    .btn_login {
+                        color: white;
+                        background-color: $turquoise;
+                        border: none;
+                        box-shadow: none;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+
+            .nav_main.active {
+                display: initial;
+            }
+
+            .btn_toggle_nav {
+                font-size: 20px;
+                width: 40px;
+                height: 40px;
+                line-height: 32px;
+                text-align: center;
+
+                @include Responesive(MD) {
+                    display: none;
+                }
+            }
+
+        }
+
+    }
+
+    .ecommerceHomeTemplate__content {
+        background-color: #f9fbfb;
+        padding-top: 4rem;
+
+        @include Responesive(MD) {
+            padding-top: 5.5rem;
+        }
+
+        height: 100%;
+    }
+}

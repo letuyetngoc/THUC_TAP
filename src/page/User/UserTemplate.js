@@ -1,6 +1,7 @@
 import React from 'react'
-import { FaUserEdit, FaUsers } from 'react-icons/fa';
+import { FaUserEdit, FaUsers, FaInfoCircle } from 'react-icons/fa';
 import { BsApple } from 'react-icons/bs';
+import { RiLockPasswordFill } from 'react-icons/ri';
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
 import { NavLink, Route } from 'react-router-dom';
 
@@ -24,19 +25,19 @@ export default function UserTemplate(props) {
                             </li>
                             <li>
                                 <NavLink className='nav__item' to='/user/users' activeClassName='nav__item_active'>
-                                    <span className='icon'><FaUserEdit /></span>
+                                    <span className='icon'><FaUsers /></span>
                                     <span className='title'>All users</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to='/user/form' className='nav__item' activeClassName='nav__item_active'>
-                                    <span className='icon'><FaUsers /></span>
+                                    <span className='icon'><RiLockPasswordFill /></span>
                                     <span className='title'>Change password</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to='/user/userInfo' className='nav__item' activeClassName='nav__item_active'>
-                                    <span className='icon'><FaUsers /></span>
+                                    <span className='icon'><FaInfoCircle /></span>
                                     <span className='title'>Infomation</span>
                                 </NavLink>
                             </li>

@@ -37,3 +37,14 @@
 @import './page/home/homeBottomLast';
 @import './page/home/homeTestimonial';
 @import './page//home//homeFooter';
+
+@import './page/ecommerce/login/loginEcom';
+@import './page/ecommerce/register/registerEcom';
+@import './page/ecommerce/store/store';
+@import './page/ecommerce/P2PTrading/P2PTrading';
+@import './page/ecommerce/P2PTrading/createBy';
+@import './page/ecommerce/P2PTrading/byCoin';
+@import './page/ecommerce/wallet/wallet';
+
+//template
+@import './template/ecommerceHomeTemplate/ecommerceHomeTemplate';

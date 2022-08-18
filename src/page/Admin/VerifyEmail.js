@@ -22,7 +22,8 @@ export default function VerifyEmail(props) {
                 localStorage.setItem('USER_LOGIN', JSON.stringify(result.data.data))
                 localStorage.setItem('ACCESS_TOKEN', result.data.data.token)
 
-                history.push('/user/users')
+                // history.push('/user/users')
+                history.push('/ecommerce/home')
 
             } catch (error) {
                 console.log('error', error)
