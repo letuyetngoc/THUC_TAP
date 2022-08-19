@@ -2,7 +2,6 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react';
 import { AiFillApple, AiOutlineMail } from 'react-icons/ai';
-import { BsPhone } from 'react-icons/bs';
 import { VscKey } from 'react-icons/vsc';
 import { history } from '../../../App';
 import { errorMessage, successMessage } from '../../../component/message';
@@ -79,7 +78,7 @@ export default function LoginEcom() {
                             <div />
                         </div>
                         <div className='content_text'>
-                            <p >You don't have an account? <span onClick={() => history.push('/ecommerce/register')}>Sign up</span></p>
+                            <p >You don't have an account? <span onClick={() => history.push('/register')}>Sign up</span></p>
                             <p >Forgot password?</p>
                         </div>
                         <div className='btn_login' onClick={handleSubmit}>Log in</div>

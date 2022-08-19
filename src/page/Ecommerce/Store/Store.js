@@ -1,10 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
 import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md'
-import Slider from 'react-slick';
+import Flickity from 'react-flickity-component'
 
 let slideIndex = 1;
-
+const flickityOptions = {
+    initialIndex: 2,
+    autoPlay: true,
+    wrapAround: true,
+    pauseAutoPlayOnHover: true,
+}
 export default function Store() {
 
     const [navItem, setNavItem] = useState({
@@ -57,31 +62,23 @@ export default function Store() {
     }
     //
 
-    //slick carousel
-    const settings = {
-        dots: true,
-        autoplay: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
-
     return (
         <div className='store'>
             <div className='store__content'>
                 <div className='store__carousel'>
-                    <Slider {...settings}>
-                        <div>
-                            <img src='' alt='...' />
-                        </div>
-                        <div>
-                            <img src='' alt='...' />
-                        </div>
-                        <div>
-                            <img src='' alt='...' />
-                        </div>
-                    </Slider>
+                    <Flickity
+                        className={'carousel'} // default ''
+                        elementType={'div'} // default 'div'
+                        options={flickityOptions} // takes flickity options {}
+                        disableImagesLoaded={false} // default false
+                        reloadOnUpdate // default false
+                        static // default false
+
+                    >
+                        <img src="./assets/img/carousel1.jpg" />
+                        <img src="./assets/img/carousel2.jpg" />
+                        <img src="./assets/img/carousel1.jpg" />
+                    </Flickity>
                 </div>
                 <div className='store_nav'>
                     <ul>
@@ -104,7 +101,7 @@ export default function Store() {
                         </li>
                         <li className={`${navItem.item1.class} navItem`} onClick={() => setNavItem({
                             item0: {
-                                item: true,
+                                item: false,
                                 class: ''
                             },
                             item1: {
@@ -220,7 +217,46 @@ export default function Store() {
                                 <div className='btn_buy'>Buy</div>
                             </div>
                         </div>
-
+                        <div className='item'>
+                            <div className='item_img'>
+                                <img src='https://picsum.photos/200' />
+                            </div>
+                            <div className='item_content'>
+                                <h5>Dự án KN PARADISE CAM RANH</h5>
+                                <p>100,000,000,000 ₫</p>
+                                <div className='btn_buy'>Buy</div>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='item_img'>
+                                <img src='https://picsum.photos/200' />
+                            </div>
+                            <div className='item_content'>
+                                <h5>Dự án KN PARADISE CAM RANH</h5>
+                                <p>100,000,000,000 ₫</p>
+                                <div className='btn_buy'>Buy</div>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='item_img'>
+                                <img src='https://picsum.photos/200' />
+                            </div>
+                            <div className='item_content'>
+                                <h5>Dự án KN PARADISE CAM RANH</h5>
+                                <p>100,000,000,000 ₫</p>
+                                <div className='btn_buy'>Buy</div>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='item_img'>
+                                <img src='https://picsum.photos/200' />
+                            </div>
+                            <div className='item_content'>
+                                <h5>Dự án KN PARADISE CAM RANH</h5>
+                                <p>100,000,000,000 ₫</p>
+                                <div className='btn_buy'>Buy</div>
+                            </div>
+                        </div>
                     </div>}
                     {navItem.item2.item && <div className='list_item'>
                         <div className='item'>

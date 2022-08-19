@@ -98,13 +98,13 @@ export default function P2PTrading() {
                                     <FaBitcoin className='icon' />
                                     Simplex
                                 </div>
-                                <div className='buy_icon_item4' onClick={() => history.push('/ecommerce/buycoin')}>
+                                <div className='buy_icon_item4' onClick={() => history.push('/buycoin')}>
                                     <div className='btn_buy'>Buy</div>
                                 </div>
                             </div>
                         </div>
                         <div className='buy_icon_button'>
-                            <div onClick={() => history.push('/ecommerce/createby')}>Create Your Buying Ad</div>
+                            <div onClick={() => history.push('/createby')}>Create Your Buying Ad</div>
                         </div>
                     </div>
                     <div className='sell_coin'>

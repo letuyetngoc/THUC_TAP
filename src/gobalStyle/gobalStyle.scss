@@ -10,34 +10,10 @@
 
 // base
 @import './reset';
+@import './component/flickity';
 // components
-@import './component//myComponent.scss';
-@import './component//formUser';
+
 // pages
-@import './page/demo.scss';
-@import './page/register/register';
-@import './page/login/login';
-
-@import './page/user/form';
-@import './page/user//userRenderFolder';
-@import './page/user/userTemplate';
-
-@import './page/admin/adminTemplate';
-@import './page/admin/AdminUser';
-@import './page/admin/AdminUserKYC';
-@import './page/admin/verifyEmail';
-
-@import './page/home/home';
-@import './page/home/homeHeader';
-@import './page//home/homeInfo';
-@import './page/home/homeUtilitity';
-@import './page/home/homeService';
-@import './page/home/homeAgents';
-@import './page//home/homeFeature';
-@import './page/home/homeBottomLast';
-@import './page/home/homeTestimonial';
-@import './page//home//homeFooter';
-
 @import './page/ecommerce/login/loginEcom';
 @import './page/ecommerce/register/registerEcom';
 @import './page/ecommerce/store/store';

@@ -39,17 +39,17 @@ export default function EcommerceHomeTemplate({ Component, ...restProps }) {
                             </div>
                             <ul className='nav_main'>
                                 <li>
-                                    <NavLink activeClassName='nav_main_active' to='/ecommerce/home' className='nav_main_item'>
+                                    <NavLink activeClassName='nav_main_active' to='/home' className='nav_main_item'>
                                         <p>Home</p>
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink activeClassName='nav_main_active' to='/ecommerce/store' className='nav_main_item'>
+                                    <NavLink activeClassName='nav_main_active' to='/store' className='nav_main_item'>
                                         <p>Store</p>
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink activeClassName='nav_main_active' to='/ecommerce/sanP2P' className='nav_main_item'>
+                                    <NavLink activeClassName='nav_main_active' to='/trading' className='nav_main_item'>
                                         <p>P2P Trading</p>
                                     </NavLink>
                                 </li>
@@ -58,7 +58,7 @@ export default function EcommerceHomeTemplate({ Component, ...restProps }) {
                                         <Popover placement="bottomRight" content={content} trigger="click">
                                             <div className='nav_avatar'>N</div>
                                         </Popover> :
-                                        <button className='btn_login' onClick={() => history.push('/ecommerce/login')}>Sign in</button>}
+                                        <button className='btn_login' onClick={() => history.push('/login')}>Sign in</button>}
                                 </div>
                             </ul>
                             <div className='btn_toggle_nav' onClick={handleToggleBtn}>
