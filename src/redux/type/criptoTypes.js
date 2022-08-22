@@ -1,0 +1,1 @@
+export const GET_NAME_COIN = 'GET_NAME_COIN'

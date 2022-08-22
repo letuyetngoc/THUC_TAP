@@ -59,6 +59,16 @@
                             background-color: #f1f1f1;
                             cursor: pointer;
                         }
+
+
+
+                        .ant-modal-body {
+                            padding: 0;
+                        }
+
+                        .ant-spin-dot-item {
+                            color: $turquoise  !important;
+                        }
                     }
                 }
 
@@ -351,4 +361,65 @@
             }
         }
     }
+}
+
+.coinTable {
+
+    .table {
+        width: 100%;
+
+        thead {
+
+            width: 100%;
+            background-color: $light-gray;
+            font-weight: 700 !important;
+            font-size: 16px;
+
+            tr {
+                td {
+                    padding: 16px;
+
+                    // button {
+                    //     border: 1px solid gray;
+                    //     background-color: white;
+                    //     padding: 3px;
+                    //     border-radius: 4px;
+                    // }
+                }
+            }
+        }
+
+        tbody {
+            position: relative;
+            width: 100%;
+
+            tr {
+                td {
+                    padding: 16px;
+
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+
+                    .coinName {
+                        color: gray;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn_addCoin {
+        padding: 5px 16px;
+        border-radius: 4px;
+        background-color: $turquoise;
+        color: white;
+        border: 1px solid $turquoise;
+        margin: 10px;
+    }
+
 }

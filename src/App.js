@@ -12,15 +12,16 @@ import P2PTrading from "./page/Ecommerce/P2PTrading/P2PTrading";
 import CreateBy from "./page/Ecommerce/P2PTrading/CreateBy";
 import BuyCoin from "./page/Ecommerce/P2PTrading/BuyCoin";
 import Wallet from "./page/Ecommerce/Wallet/Wallet";
+import WidthDraw from "./page/Ecommerce/WithDraw/WidthDraw";
 
 export let history = createBrowserHistory();
 
 function App() {
+
   return (
     <GobalStyle>
       <Router history={history}>
         <Switch>
-
           <Route exact path='/ecommerce' component={EcommerceHomeTemplate} />
           <EcommerceHomeTemplate exact path='/home' Component={HomeEcom} />
           <EcommerceHomeTemplate exact path='/store' Component={Store} />
@@ -30,9 +31,8 @@ function App() {
           <EcommerceHomeTemplate exact path='/createby' Component={CreateBy} />
           <EcommerceHomeTemplate exact path='/buycoin' Component={BuyCoin} />
           <EcommerceHomeTemplate exact path='/wallet' Component={Wallet} />
+          <EcommerceHomeTemplate exact path='/withdraw' Component={WidthDraw} />
           <EcommerceHomeTemplate exact path='' Component={HomeEcom} />
-
-
         </Switch>
       </Router>
     </GobalStyle>

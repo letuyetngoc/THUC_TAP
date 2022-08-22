@@ -1,17 +1,71 @@
 import React, { useEffect, useState } from 'react'
-
+import { useDispatch } from 'react-redux';
 import { FaBitcoin } from 'react-icons/fa';
 import { BsFillFlagFill, BsFlag } from 'react-icons/bs';
 import { AiFillThunderbolt } from 'react-icons/ai';
-
+import socket from '../../../socket/Socket';
+import { cryptoService } from '../../../service/CryptoService';
 import { Modal } from 'antd'
 
 import { history } from '../../../App';
 
 export default function P2PTrading() {
+    const dispatch = useDispatch()
+    const [listCoinInit, setListCoinInit] = useState()
+    const [listCoin, setListCoin] = useState()
+    const [nameCoin, setNameCoin] = useState('Bitcoin')
+
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
+
     useEffect(() => {
-        window.scrollTo(0, 0)
+        const getListCoinAll = async () => {
+            try {
+                const result = await cryptoService.getListCoinAll()
+                // console.log('result', result.data.data)
+                setListCoinInit(result.data.data)
+            } catch (error) {
+                console.log('error', error)
+            }
+        }
+        dispatch(getListCoinAll)
     }, [])
+
+    useEffect(() => {
+        socket.on("listCoin", (res) => {
+            // console.log(res, "listCoin");
+            setListCoin(res)
+
+        })
+        return () => {
+            socket.off("listCoin")
+        }
+    }, [])
+
+    const renderListCoin = () => {
+        const renderTable = (coin) => {
+            return <tr key={coin.id} onClick={() => {
+                setNameCoin(coin.token_key)
+                setIsModalVisible(false)
+            }}
+                style={{ cursor: 'pointer' }}
+            >
+                <td
+                >
+                    <span>{coin.token_key} </span><br />
+                    <span className='coinName'>{coin.name}</span>
+                </td>
+                <td>{coin.percent}%</td>
+                <td>{coin.price}</td>
+                <td>{coin.volume}</td>
+            </tr>
+        }
+
+        return listCoin && listCoin.map((coin) => renderTable(coin)) ||
+            listCoinInit && listCoinInit.map((coin) => renderTable(coin))
+    }
+
 
     //modal
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -35,15 +89,33 @@ export default function P2PTrading() {
                     <div className='P2Ptrading__top-container'>
                         <div className='P2Ptrading__chooseCoin'>
                             <div className='chooseCoin_left'>
-                                <FaBitcoin className='icon' />
-                                <span>Bitcoin Cash</span>
+                                {/* <FaBitcoin className='icon' /> */}
+                                <span>{nameCoin}</span>
                             </div>
                             <div className='chooseCoin_right'>
                                 <div onClick={showModal}>Choose another coin</div>
-                                <Modal closable={false} footer={null} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                    <p>Some contents...</p>
-                                    <p>Some contents...</p>
-                                    <p>Some contents...</p>
+                                <Modal closable={false}
+                                    footer={null}
+                                    visible={isModalVisible}
+                                    onOk={handleOk}
+                                    onCancel={handleCancel}
+                                    width={1000}
+                                >
+                                    <div className='coinTable'>
+                                        <table className='table'>
+                                            <thead>
+                                                <tr>
+                                                    <td>COIN NAME</td>
+                                                    <td>24H CHANGE</td>
+                                                    <td>PRICE</td>
+                                                    <td>24H VOLUME</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {renderListCoin()}
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </Modal>
                             </div>
                         </div>
