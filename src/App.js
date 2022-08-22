@@ -22,17 +22,7 @@ function App() {
     <GobalStyle>
       <Router history={history}>
         <Switch>
-          <Route exact path='/ecommerce' component={EcommerceHomeTemplate} />
-          <EcommerceHomeTemplate exact path='/home' Component={HomeEcom} />
-          <EcommerceHomeTemplate exact path='/store' Component={Store} />
-          <EcommerceHomeTemplate exact path='/trading' Component={P2PTrading} />
-          <EcommerceHomeTemplate exact path='/login' Component={LoginEcom} />
-          <EcommerceHomeTemplate exact path='/register' Component={RegisterEcom} />
-          <EcommerceHomeTemplate exact path='/createby' Component={CreateBy} />
-          <EcommerceHomeTemplate exact path='/buycoin' Component={BuyCoin} />
-          <EcommerceHomeTemplate exact path='/wallet' Component={Wallet} />
-          <EcommerceHomeTemplate exact path='/withdraw' Component={WidthDraw} />
-          <EcommerceHomeTemplate exact path='' Component={HomeEcom} />
+
         </Switch>
       </Router>
     </GobalStyle>

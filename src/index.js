@@ -8,13 +8,8 @@ import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux'
 // redux-thunk
 import thunk from 'redux-thunk';
-// redux-saga
-import createSagaMiddleware from 'redux-saga'
-import rootSaga from './redux/saga/rootSaga';
 
-// const sagaMiddleware = createSagaMiddleware()
 const store = createStore(rootReducer, applyMiddleware(thunk))
-// sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(
   <Provider store={store}>
